@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Islamic Prayer Times - Kenya</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Islamic Prayer Times - Kenya</h1>
+        
+        <!-- Select County Dropdown -->
+        <select id="countySelect" onchange="getPrayerTimes()">
+            <option value="">Select a county</option>
+            <option value="Nairobi">Nairobi</option>
+            <option value="Mombasa">Mombasa</option>
+            <option value="Kisumu">Kisumu</option>
+            <option value="Nakuru">Nakuru</option>
+            <option value="Eldoret">Eldoret</option>
+            <!-- Add more counties as needed -->
+        </select>
+        
+        <!-- Input City and Date -->
+        <input type="text" id="cityInput" placeholder="Enter a city" oninput="getPrayerTimes()">
+        <input type="date" id="dateInput" onchange="getPrayerTimes()">
+        
+        <!-- Loading and Error Messages -->
+        <div id="loading" style="display:none;">Loading...</div>
+        <div id="error" style="display:none;color:red;"></div>
+        
+        <!-- Prayer Times Display -->
+        <div id="prayerTimes"></div>
+    </div>
+</body>
+</html>
